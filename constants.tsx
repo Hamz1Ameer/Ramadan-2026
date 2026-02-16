@@ -89,48 +89,69 @@ export const DUAS: Dua[] = [
   },
 ];
 
+export const STAGE_DUAS = [
+  {
+    title: "Dua for Stage 1 (Mercy)",
+    arabic: "رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ خَيْرُ الرَّاحِمِينَ",
+    transliteration: "Rabbi-ighfir war-ham wa Anta khairur-rahimeen",
+    translation:
+      "My Lord, forgive and have mercy, for You are the best of those who show mercy.",
+  },
+  {
+    title: "Dua for Stage 2 (Forgiveness)",
+    arabic: "أَسْتَغْفِرُ اللَّهَ رَبِّي مِنْ كُلِّ ذَنْبٍ وَأَتُوبُ إِلَيْهِ",
+    transliteration: "Astaghfirullaha Rabbi min kulli dhambin wa atubu ilaih",
+    translation:
+      "I seek forgiveness from Allah, my Lord, for every sin and I turn to Him in repentance.",
+  },
+  {
+    title: "Dua for Stage 3 (Protection)",
+    arabic: "اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ",
+    transliteration: "Allahumma Ajirni minan-nar",
+    translation: "O Allah, save me from the Fire.",
+  },
+];
+
 export const QARIS: Qari[] = [
   {
     id: "1",
     name: "Mishary Rashid Al-Afasy",
     server: "https://server8.mp3quran.net/afs/",
     photo:
-      "https://images.unsplash.com/photo-1590076214667-c0f33b98c442?auto=format&fit=crop&q=80&w=200",
+      "https://www.assabile.com/media/photo/full_size/mishary-rashid-alafasy-3.jpg",
   },
   {
     id: "2",
     name: "Abdul Rahman Al-Sudais",
     server: "https://server11.mp3quran.net/sds/",
     photo:
-      "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=200",
+      "https://www.assabile.com/media/person/200x256/abdul-rahman-al-sudais.png",
   },
   {
     id: "3",
     name: "Saud Al-Shuraim",
     server: "https://server7.mp3quran.net/shur/",
-    photo:
-      "https://images.unsplash.com/photo-1584551270911-6556117906a1?auto=format&fit=crop&q=80&w=200",
+    photo: "https://www.assabile.com/media/person/200x256/saoud-shuraim.png",
   },
   {
     id: "4",
     name: "Maher Al-Muaiqly",
-    server: "https://server12.mp3quran.net/muaiqly/",
+    server: "https://server12.mp3quran.net/maher/",
     photo:
-      "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=200",
+      "https://www.assabile.com/media/photo/full_size/maher-al-mueaqly-666.jpg",
   },
   {
     id: "5",
     name: "Saad Al-Ghamdi",
     server: "https://server7.mp3quran.net/s_gmd/",
-    photo:
-      "https://images.unsplash.com/photo-1584551270911-6556117906a1?auto=format&fit=crop&q=80&w=200",
+    photo: "https://www.assabile.com/media/person/200x256/saad-el-ghamidi.png",
   },
   {
     id: "6",
     name: "Yasser Ad-Dussary",
     server: "https://server11.mp3quran.net/yasser/",
     photo:
-      "https://images.unsplash.com/photo-1590076214667-c0f33b98c442?auto=format&fit=crop&q=80&w=200",
+      "https://www.assabile.com/media/person/200x256/yasser-al-dossari.png",
   },
 ];
 
@@ -273,6 +294,58 @@ export const HADITHS: Hadith[] = [
       "He who provides a fasting person something with which to break his fast, will earn the same reward as the one who was observing the fast.",
     source: "Tirmidhi",
     benefit: "Generosity in Ramadan multiplies your rewards manifold.",
+  },
+  {
+    content: "The best among you are those who learn the Qur’an and teach it.",
+    source: "Sahih al-Bukhari",
+    benefit:
+      "Learning and teaching the Qur’an elevates a person's status and brings continuous reward.",
+  },
+  {
+    content:
+      "Actions are judged by intentions, and every person will have what they intended.",
+    source: "Sahih al-Bukhari & Sahih Muslim",
+    benefit:
+      "Sincerity is the foundation of all deeds, and pure intentions transform ordinary acts into worship.",
+  },
+  {
+    content:
+      "None of you truly believes until he loves for his brother what he loves for himself.",
+    source: "Sahih al-Bukhari & Sahih Muslim",
+    benefit:
+      "True faith requires selflessness, empathy, and sincere care for others.",
+  },
+  {
+    content:
+      "The strong person is not the one who overcomes others by strength, but the one who controls himself while in anger.",
+    source: "Sahih al-Bukhari & Sahih Muslim",
+    benefit:
+      "Self-control and patience are greater signs of strength than physical power.",
+  },
+  {
+    content:
+      "Make things easy and do not make them difficult, give glad tidings and do not repel people.",
+    source: "Sahih al-Bukhari & Sahih Muslim",
+    benefit:
+      "Islam encourages kindness, wisdom, and gentleness in dealing with others.",
+  },
+  {
+    content:
+      "The most beloved deeds to Allah are those that are consistent, even if they are small.",
+    source: "Sahih al-Bukhari & Sahih Muslim",
+    benefit: "Consistency in small good deeds builds lasting spiritual growth.",
+  },
+  {
+    content:
+      "Whoever believes in Allah and the Last Day, let him speak good or remain silent.",
+    source: "Sahih al-Bukhari & Sahih Muslim",
+    benefit: "Mindful speech protects relationships and strengthens faith.",
+  },
+  {
+    content: "Charity does not decrease wealth.",
+    source: "Sahih Muslim",
+    benefit:
+      "Giving sincerely brings barakah (blessing) and spiritual increase.",
   },
 ];
 

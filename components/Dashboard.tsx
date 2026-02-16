@@ -29,7 +29,7 @@ interface HijriDate {
     number: number;
     en: string;
   };
-  year: string;
+  year: number;
 }
 
 export default function Dashboard() {
@@ -57,19 +57,15 @@ export default function Dashboard() {
     return () => clearInterval(timer);
   }, []);
 
-  // Persist stats whenever they change
   useEffect(() => {
     localStorage.setItem("nur_ramadan_stats_v2", JSON.stringify(userStats));
   }, [userStats]);
 
-  // Fetch location and Hijri date/Prayer times
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(async (position) => {
         try {
           const { latitude, longitude } = position.coords;
-
-          // Reverse Geocoding for City/Country Name
           const geoResponse = await fetch(
             `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`,
           );
@@ -78,7 +74,6 @@ export default function Dashboard() {
             `${geoData.city || geoData.locality || "Unknown"}, ${geoData.countryName}`,
           );
 
-          // Aladhan API for Prayer Times and Hijri Date
           const response = await fetch(
             `https://api.aladhan.com/v1/timings?latitude=${latitude}&longitude=${longitude}&method=2`,
           );
@@ -94,7 +89,7 @@ export default function Dashboard() {
   }, []);
 
   // Helper: Get total days in a Hijri year (simple civil approximation)
-  const getHijriYearDays = (year) => {
+  const getHijriYearDays = (year: number) => {
     // Hijri leap years in 30-year cycle
     const leapYears = [2, 5, 7, 10, 13, 16, 18, 21, 24, 26, 29];
     const cycleYear = year % 30;
@@ -102,14 +97,14 @@ export default function Dashboard() {
   };
 
   // Helper: Get days in Hijri month (civil calculation)
-  const getHijriMonthDays = (month, year) => {
+  const getHijriMonthDays = (month: number, year: number) => {
     if (month % 2 !== 0) return 30; // odd months = 30
     if (month !== 12) return 29; // even months = 29
     return getHijriYearDays(year) === 355 ? 30 : 29; // Dhul Hijjah
   };
 
   // Helper: Get day of year
-  const getHijriDayOfYear = (day, month, year) => {
+  const getHijriDayOfYear = (day: number, month: number, year: number) => {
     let total = 0;
     for (let m = 1; m < month; m++) {
       total += getHijriMonthDays(m, year);
@@ -272,7 +267,9 @@ export default function Dashboard() {
               )}
             </div>
             <p className="text-emerald-100/80 text-sm font-medium pt-2 italic">
-              "The best of people are those who are most beneficial to others."
+              {ramadanInfo.status === "countdown"
+                ? "Prepare your heart for the most blessed month."
+                : "The best of people are those who are most beneficial to others."}
             </p>
           </div>
 
