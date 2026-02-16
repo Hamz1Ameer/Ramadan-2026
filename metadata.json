@@ -1,0 +1,5 @@
+{
+  "name": "Ameer Ramadan Guide",
+  "description": "A comprehensive spiritual companion for the holy month of Ramadan, featuring prayer times, a daily checklist, Quran tracker, AI-powered guidance, and essential supplications.",
+  "requestFramePermissions": ["geolocation"]
+}
